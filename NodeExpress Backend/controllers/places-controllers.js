@@ -84,7 +84,7 @@ const createPlace = async (req, res, next) => {
     description,
     address,
     location: coordinates,
-    image: req.file.path.replace("\\","/"),
+    image: req.file.path.replaceAll("\\","/"),
     creator
   });
 
